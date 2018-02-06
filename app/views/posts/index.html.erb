@@ -16,7 +16,7 @@
       <tr>
         <td>
           <% post.images.each do |image| %>
-            <%= image_tag image, size: '50x50' %>
+            <%= image_tag image.variant(resize: '50x50') %>
           <% end %>
         </td>
         <td><%= post.title %></td>
