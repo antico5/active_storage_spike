@@ -11,8 +11,10 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @post.image %>
+  <strong>Images:</strong>
+  <% @post.images.each do |image| %>
+    <%= image_tag image %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
